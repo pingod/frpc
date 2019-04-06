@@ -13,7 +13,7 @@ local_port=${local_port}
 service_type=${service_type}
 
 
-sed -i 's#0.0.0.0#${remote_ip}#g' /uar/local/frp/frpc_lite.ini
+sed -i "s#0.0.0.0#${remote_ip}#g" /usr/local/frp/frpc-lite.ini
 
 echo "
 [range:${service_name} ${position_note}]
@@ -23,6 +23,6 @@ local_port = ${local_port}
 remote_port = 0
 use_encryption = true
 use_compression = true
-" >> /uar/local/frp/frpc_lite.ini
+" >> /usr/local/frp/frpc-lite.ini
 
-/usr/local/frp/frpc -c /uar/local/frp/frpc_lite.ini
+/usr/local/frp/frpc -c /usr/local/frp/frpc-lite.ini
