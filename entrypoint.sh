@@ -8,8 +8,8 @@ if [ -z "$server_port" ]; then
   export server_port=7100
 fi
 
-if [ -z "$privilege_token" ]; then
-  export privilege_token=405520
+if [ -z "$token" ]; then
+  export token=405520
 fi
 
 if [ -z "$login_fail_exit" ]; then
@@ -39,7 +39,7 @@ server_port = ${server_port}
 log_file = console
 log_level = info
 log_max_days = 3
-privilege_token = ${privilege_token}
+token = ${token}
 
 admin_addr = 127.0.0.1
 admin_port = 7400
